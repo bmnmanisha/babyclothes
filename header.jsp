@@ -4,9 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Header</title>
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
+<title>Insert title here</title>
+<link href="resources/css/bootstrap.min.css" rel="stylesheet">
 <style>
 .navbar {
 	background-color: #282828;
@@ -35,7 +34,7 @@
 			</ul>
 			<ul class="nav navbar-nav pull-right">
 				<li><a href="#">Login</a></li>
-				<li><a href="#">Register</a></li>
+				<li><a href="register">Register</a></li>
 			</ul>
 		</div>
 	</div>
