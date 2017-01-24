@@ -11,31 +11,32 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.children.model.Customer;
-import com.children.service.CustomerService;
+import com.children.model.Product;
+import com.children.service.ProductService;
 
 @Controller
-public class RegisterController {
-    
-	@RequestMapping("/register")
-	public String registerCustomer() {
-
-		return "register";
+public class ProductController {
+	
+	@RequestMapping("/addProduct")
+	public String Productadded() {
+		return "addProduct";
 	}
 
-	@ModelAttribute("registration")
-	public Customer newcustomer() {
-		return new Customer();
+	@ModelAttribute("productsubmitted")
+	public Product newproduct() {
+		return new Product();
 	}
 
 	@Autowired
-	private CustomerService customerService;
+	private ProductService productService;
 
-	@RequestMapping(value = "/registerCustomer", method = RequestMethod.POST)
-	public ModelAndView registerCustomerPost(@ModelAttribute("registration") Customer customer, BindingResult result,
+	@RequestMapping(value = "/productadd", method = RequestMethod.POST)
+	public ModelAndView productaddPost(@ModelAttribute("productsubmitted") Product product, BindingResult result,
 			HttpServletRequest request) {
 
-		customerService.addCustomer(customer);
-		ModelAndView model = new ModelAndView("registerSuccess");
+		productService.addProduct(product);
+		ModelAndView model = new ModelAndView("productAddSuccess");
 		return model;
 	}
+
 }

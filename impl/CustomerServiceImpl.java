@@ -21,9 +21,8 @@ public class CustomerServiceImpl implements CustomerService {
 
 	}
 
-	public Customer getCustomerById(int customerId) {
+	public void getCustomerById(int customerId) {
 		// TODO Auto-generated method stub
-		return null;
 	}
 
 	public List<Customer> getAllCustomers() {
