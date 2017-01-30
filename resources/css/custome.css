@@ -1,0 +1,13 @@
+.navbar{
+background-color:#282828;
+}
+.navbar li a {
+	
+	color:white:important;
+}
+
+.navbar li a:hover {
+	
+	color:blue:important;
+}
+
